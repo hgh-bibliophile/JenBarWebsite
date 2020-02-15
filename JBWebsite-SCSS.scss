@@ -1,0 +1,311 @@
+//colors
+$black_50: rgba(0, 0, 0, 0.5);
+$black: black;
+$red: #aa0000;
+$black_0: rgba(0, 0, 0, 0.0);
+$gray: #717070;
+$silver_48: rgba(168, 168, 168, 0.48);
+$white: white;
+
+//transitions
+$height: height 0.5s;
+$height-no: height 0s;
+$width: width 0.5s;
+$bkgd-no: background-color 0s;
+$bkgd: background-color 0.5s;
+$no: font-size 0s;
+
+//fonts
+$font_0: century gothic;
+
+//urls
+$url_0: url(../Photos/JenBarTruck.jpg);
+$url_1: url(../Photos/JenBarTruck-Header.png);
+
+//@extend-elements
+%active-button {
+	background-color: $silver_48;
+	color: $white !important;
+}
+
+%menu {
+	position: fixed;
+	top: 0;
+	margin: 0;
+}
+
+//mixins
+@mixin trans($property1, $property2) {
+	transition: $property1, $property2;
+}
+
+#active-page {
+	color: $red;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@extend %active-button;
+	}
+}
+
+.button-style {
+	background: $black_0;
+	color: $gray;
+	font-weight: bold;
+
+	&:hover,
+	&:active,
+	&:focus {
+		@extend %active-button;
+	}
+}
+
+.pure-menu-item {
+	color: $gray;
+}
+
+.menu-bars-toggle {
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	top: 0;
+	right: 2%;
+	margin-top: 2%;
+
+	.bar {
+		background-color: $gray;
+		display: block;
+		width: 20px;
+		height: 2px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 100px;
+		position: absolute;
+		top: 53.5%;
+		right: 31%;
+		@include trans(all 0.5s, $height);
+
+		&:first-child {
+			transform: translateY(-6px);
+		}
+	}
+
+	&.x .bar {
+		transform: rotate(45deg);
+
+		&:first-child {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+* {
+	font-family: $font_0;
+}
+
+body {
+	background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    overflow-x: hidden !important;
+
+	&.photo-background {
+		background: linear-gradient($black_50, $black_50), $url_0;
+	}
+}
+
+.menu-wrapper {
+	background-color: $black_50;
+	overflow: hidden;
+	@include trans($height, $bkgd-no);
+	z-index: 10;
+	width: 100%;
+}
+
+#truck-background {
+	height: 285px;
+	background: linear-gradient($black_50, $black_50), $url_1;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-size: auto 100%;
+	background-position: center top;
+	position: relative;
+	top: 0;
+	z-index: -1;
+	margin: -3px;
+}
+
+#red-line-sticky {
+	background-color: $red;
+	height: 15px;
+	width: 100%;
+	@include trans(top 0.5s, $no);
+}
+
+.black {
+	background-color: $black !important;
+	color: $gray !important;
+	@include trans($height, $bkgd-no);
+}
+
+.about {
+	text-align: center;
+}
+
+@media(min-width: 47.999em) {
+
+	#mobileTest-Home,
+	#mobileTest-About,
+	.menu-bars-toggle {
+		display: none;
+	}
+
+	.hidden {
+		display: inline !important;
+	}
+
+	#collapsable-menu {
+		position: absolute;
+		left: 250px;
+		margin-top: 35px;
+	}
+
+	#owners-photo {
+		width: 65%;
+		float: left;
+		margin-left: 1%;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 15px;
+	}
+
+	.fixed-about {
+		&.menu-wrapper {
+			height: 6.7em;
+			padding: 10px;
+		}
+
+		.logo-menu {
+			width: 200px;
+			@include trans($width, $no);
+		}
+
+		#red-line-sticky {
+			position: sticky;
+			top: 127px;
+		}		
+	}
+
+	.scroll-home {
+		&.menu-wrapper {
+			height: 267px;
+			@include trans($height-no, $bkgd-no);
+		}
+
+		#menu-spacer {
+			height: 267px;
+		}
+
+		.logo-menu {
+			width: 90px;
+			float: left;
+			clear: both;
+			@include trans(display 0.5s, $no);
+		}
+
+		.logo-shift {
+			width: 400px;
+			margin-top: 3px;
+		}
+
+		#collapsable-menu {
+			position: relative;
+			left: 7px;
+			margin-top: 15px;
+		}
+
+		.menu-bars-toggle {
+			top: 12px;
+			right: 22px;
+		}
+
+		#div {
+			position: absolute;
+			top: 200px;
+		}
+
+		.menu-wrapper {
+			@include trans($height-no, $bkgd);
+		}
+
+		.black {
+			@include trans($bkgd-no, $no);
+		}
+	}
+}
+
+@media(max-width: 47.999em) {
+	#mobileTest-Home {
+		display: block;
+		height: 3.7em;
+		margin: 2%;
+	}
+
+	#mobileTest-About {
+		display: block;
+	}
+
+	.scroll-home {
+		&#menu {
+			position: fixed;
+		}
+	}
+
+	.menu-wrapper {
+		width: 96%;
+		padding: 2%;
+		height: 3.7em;
+		@include trans($height, $bkgd)
+
+		&.open {
+			height: 12.35em;
+			background-color: $black !important;
+			@include trans($height, $bkgd);
+
+			.logo-menu {
+				width: 150px;
+				margin-bottom: 0;
+				@include trans(all 0.5s, $height);
+			}
+		}
+	}
+
+	.menu-bars-toggle {
+		display: block;
+	}
+
+	.logo-menu {
+		width: 90px;
+		@include trans($width, $no);
+	}
+
+	.hidden {
+		display: none !important;
+	}
+
+	#owners-photo {
+		width: 95%;
+		display: block;
+		margin: auto;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 15px;
+	}
+}
+
+.fixed-about#menu {
+	@extend %menu;
+}
+
+.scroll-home#menu {
+	@extend %menu;
+}
