@@ -97,9 +97,9 @@ function checkSize() {
 			$('#menu').removeClass('black')
 		}
 	}
-	function whiteMobile(scroll) {		
+	function whiteMobile(scroll) {
 		if (scroll >= 195) {
-			$('#menu').addClass('black')			
+			$('#menu').addClass('black')
 		} else {
 			$('#menu').removeClass('black')
 			}
@@ -133,7 +133,7 @@ function checkSize() {
 			truckMobile(scroll);
 		}
 	}
-	
+
 	scrollTest();
 	$(window).scroll(function () {
 		scrollTest();
