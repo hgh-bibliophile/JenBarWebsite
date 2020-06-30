@@ -1,74 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
+		<title>JenBar Trucking | Contact</title>
+		<link rel="shortcut icon" href="photos/JBFavicon.ico" />
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+			integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css"
+		/>
+		<link rel="stylesheet" href="styles/JBWebsite-Styles.css" />
 
-	<title>JenBar Trucking | Contact</title>
-	<link rel="shortcut icon" href="Photos/JBFavicon.ico">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head>
 
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+	<body class="fixed-about">
+		<div id="mobileTest-About"></div>
 
-	<link rel="stylesheet" href="Stylesheets/JBWebsite-CSS.min.css">
+		<div class="menu-wrapper pure-g fixed-about" id="menu">
+			<div class="pure-u-1 pure-u-md-1-8">
+				<div class="pure-menu">
+					<img
+						class="pure-menu-heading logo-menu"
+						src="photos/JenbarLogo-Red&White-Transparent.png"
+						alt="Jenbar-Logo-Red"
+					/>
+					<a href="#" class="menu-bars-toggle" id="toggle"
+						><s class="bar"></s><s class="bar"></s
+					></a>
+				</div>
+			</div>
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-</head>
-
-<body class="fixed-about">
-	<div id="mobileTest-About"></div>
-
-	<div class="menu-wrapper pure-g fixed-about" id="menu">
-		<div class="pure-u-1 pure-u-md-1-8">
-			<div class="pure-menu">
-				<img class="pure-menu-heading logo-menu" src="Photos/JenbarLogo-Red&White-Transparent.png" alt='Jenbar-Logo-Red'>
-				<a href="#" class="menu-bars-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+			<div
+				class="pure-u-1 pure-u-md-7-8 pure-menu pure-menu-horizontal hidden menu-can-open"
+			>
+				<div id="collapsable-menu">
+					<ul class="pure-menu-list">
+						<li class="pure-menu-item">
+							<a
+								class="pure-menu-link pure-button button-style"
+								href="JBWebsite-Index.html"
+								>Home</a
+							>
+						</li>
+						<li class="pure-menu-item hidden">|</li>
+						<li class="pure-menu-item">
+							<a
+								class="pure-menu-link pure-button button-style"
+								href="JBWebsite-About.html"
+								>About</a
+							>
+						</li>
+						<li class="pure-menu-item hidden">|</li>
+						<li class="pure-menu-item">
+							<a
+								id="active-page"
+								class="pure-menu-link pure-button button-style"
+								href="JBWebsite-Contact.html"
+								>Contact</a
+							>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
+		<div id="truck-background"></div>
+		<div id="red-line-sticky"></div>
 
-		<div class="pure-u-1 pure-u-md-7-8 pure-menu pure-menu-horizontal hidden menu-can-open">
-			<div id="collapsable-menu">
-				<ul class="pure-menu-list">
-					<li class="pure-menu-item"><a class="pure-menu-link pure-button button-style " href="index.html">Home</a></li>
-					<li class="pure-menu-item hidden">|</li>
-					<li class="pure-menu-item"><a class="pure-menu-link pure-button button-style" href="JBWebsite-About.html">About</a></li>
-					<li class="pure-menu-item hidden">|</li>
-					<li class="pure-menu-item"><a id="active-page" class="pure-menu-link pure-button button-style" href="JBWebsite-Contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="truck-background"></div>
-	<div id="red-line-sticky"></div>
+		<main>
+			<p class="about">
+				JenBar Trucking, Inc. is a United States Postal Service transportation
+				contractor based in the Syracuse area of central New York state.
+			</p>
+			<p class="about">
+				ADDRESS<br />
+				7519 East Dead Creek Rd.<br />
+				Baldwinsville, NY 13027
+			</p>
+			<p class="about">
+				INFO<br />
+				info@jenbartrucking.com<br />
+				315-415-0672
+			</p>
+			<img
+				id="owners-photo"
+				src="photos/Mom-Dad-Chris-Jenny-2.jpg"
+				alt="Trucks and Owners"
+			/>
 
-	<main>
-
-		<p class="about">
-			JenBar Trucking, Inc. is a United States Postal Service transportation contractor based in the Syracuse area of central New York state.
-		</p>
-		<p class="about">
-			ADDRESS<br>
-			7519 East Dead Creek Rd.<br>
-			Baldwinsville, NY 13027
-		</p>
-		<p class="about">INFO<br>
-			info@jenbartrucking.com<br>
-			315-415-0672
-		</p>
-		<img id="owners-photo" src="Photos/Mom-Dad-Chris-Jenny-2.jpg" alt="Trucks and Owners">
-
-
-
-		<p class="about">
-
-			The<br>header<br>will<br>stick<br>to<br>the<br>top<br>when<br>you<br>reach<br>its<br>scroll<br>position.<br>Scroll<br>back<br>up<br>to<br>remove<br>the<br>sticky<br> effect.<br>The<br>header<br>will<br>stick<br>to<br>the<br>top<br>when<br>you<br>reach<br>its<br>scroll<br>position.<br>Scroll<br>back<br>up<br>to<br>remove<br>the<br>sticky<br> effect.<br>The<br>header<br>will<br>stick<br>to<br>the<br>top<br>when<br>you<br>reach<br>its<br>scroll<br>position.<br>Scroll<br>back<br>up<br>to<br>remove<br>the<br>sticky<br> effect.<br>The<br>header<br>will<br>stick<br>to<br>the<br>top<br>when<br>you<br>reach<br>its<br>scroll<br>position.<br>Scroll<br>back<br>up<br>to<br>remove<br>the<br>sticky<br> effect.<br>
-		</p>
-	</main>
-	<script src="JBWebsite-JS.js"></script>
-</body>
+			<p class="about">
+				The<br />header<br />will<br />stick<br />to<br />the<br />top<br />when<br />you<br />reach<br />its<br />scroll<br />position.<br />Scroll<br />back<br />up<br />to<br />remove<br />the<br />sticky<br />
+				effect.<br />The<br />header<br />will<br />stick<br />to<br />the<br />top<br />when<br />you<br />reach<br />its<br />scroll<br />position.<br />Scroll<br />back<br />up<br />to<br />remove<br />the<br />sticky<br />
+				effect.<br />The<br />header<br />will<br />stick<br />to<br />the<br />top<br />when<br />you<br />reach<br />its<br />scroll<br />position.<br />Scroll<br />back<br />up<br />to<br />remove<br />the<br />sticky<br />
+				effect.<br />The<br />header<br />will<br />stick<br />to<br />the<br />top<br />when<br />you<br />reach<br />its<br />scroll<br />position.<br />Scroll<br />back<br />up<br />to<br />remove<br />the<br />sticky<br />
+				effect.<br />
+			</p>
+		</main>
+		<script src="scripts/JBWebsite-JS.js"></script>
+	</body>
 </html>

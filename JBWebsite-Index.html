@@ -3,11 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<title>JenBar Trucking | About</title>
+		<title>JenBar Trucking | Home</title>
 		<link rel="shortcut icon" href="photos/JBFavicon.ico" />
 
+		<!--Stylesheets-->
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
@@ -18,19 +17,21 @@
 			rel="stylesheet"
 			href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css"
 		/>
-		<link rel="stylesheet" href="styles/JBWebsite-Styles.css" />
-
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="styles/JBWebsite-Styles.css" />
 	</head>
 
-	<body class="fixed-about">
-		<div id="mobileTest-About"></div>
-
-		<div class="menu-wrapper pure-g fixed-about" id="menu">
-			<div class="pure-u-1 pure-u-md-1-8">
+	<body class="photo-background scroll-home">
+		<div id="mobileTest-Home"></div>
+		<div id="menu-spacer"></div>
+		<div class="menu-wrapper pure-g scroll-home" id="menu">
+			<div class="pure-u-1">
 				<div class="pure-menu">
 					<img
-						class="pure-menu-heading logo-menu"
+						class="pure-menu-heading logo-menu logo-shift"
+						id=""
 						src="photos/JenbarLogo-Red&White-Transparent.png"
 						alt="Jenbar-Logo-Red"
 					/>
@@ -39,14 +40,15 @@
 					></a>
 				</div>
 			</div>
-
 			<div
-				class="pure-u-1 pure-u-md-7-8 pure-menu pure-menu-horizontal hidden menu-can-open"
+				class="pure-u-1 pure-menu pure-menu-horizontal hidden menu-can-open"
+				id="div"
 			>
 				<div id="collapsable-menu">
 					<ul class="pure-menu-list">
 						<li class="pure-menu-item">
 							<a
+								id="active-page"
 								class="pure-menu-link pure-button button-style"
 								href="JBWebsite-Index.html"
 								>Home</a
@@ -55,7 +57,6 @@
 						<li class="pure-menu-item hidden">|</li>
 						<li class="pure-menu-item">
 							<a
-								id="active-page"
 								class="pure-menu-link pure-button button-style"
 								href="JBWebsite-About.html"
 								>About</a
@@ -73,13 +74,12 @@
 				</div>
 			</div>
 		</div>
-		<div id="truck-background"></div>
-		<div id="red-line-sticky"></div>
 
 		<main>
 			<p class="about">
-				JenBar Trucking, Inc. is a United States Postal Service transportation
-				contractor based in the Syracuse area of central New York state.
+				Works! JenBar Trucking, Inc. is a United States Postal Service
+				transportation contractor based in the Syracuse area of central New York
+				state.
 			</p>
 			<p class="about">
 				ADDRESS<br />
@@ -91,6 +91,7 @@
 				info@jenbartrucking.com<br />
 				315-415-0672
 			</p>
+
 			<img
 				id="owners-photo"
 				src="photos/Mom-Dad-Chris-Jenny-2.jpg"
@@ -105,6 +106,7 @@
 				effect.<br />
 			</p>
 		</main>
+
 		<script src="scripts/JBWebsite-JS.js"></script>
 	</body>
 </html>

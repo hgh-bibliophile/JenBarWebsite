@@ -2,7 +2,7 @@
 $black_50: rgba(0, 0, 0, 0.5);
 $black: black;
 $red: #aa0000;
-$black_0: rgba(0, 0, 0, 0.0);
+$black_0: rgba(0, 0, 0, 0);
 $gray: #717070;
 $silver_48: rgba(168, 168, 168, 0.48);
 $white: white;
@@ -19,8 +19,8 @@ $no: font-size 0s;
 $font_0: century gothic;
 
 //urls
-$url_0: url(../Photos/JenBarTruck.jpg);
-$url_1: url(../Photos/JenBarTruck-Header.png);
+$url_0: url(../photos/JenBarTruck.jpg);
+$url_1: url(../photos/JenBarTruck-Header.png);
 
 //@extend-elements
 %active-button {
@@ -105,10 +105,10 @@ $url_1: url(../Photos/JenBarTruck-Header.png);
 
 body {
 	background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    overflow-x: hidden !important;
+	background-size: cover !important;
+	background-position: center !important;
+	background-attachment: fixed !important;
+	overflow-x: hidden !important;
 
 	&.photo-background {
 		background: linear-gradient($black_50, $black_50), $url_0;
@@ -153,8 +153,7 @@ body {
 	text-align: center;
 }
 
-@media(min-width: 47.999em) {
-
+@media (min-width: 47.999em) {
 	#mobileTest-Home,
 	#mobileTest-About,
 	.menu-bars-toggle {
@@ -193,7 +192,7 @@ body {
 		#red-line-sticky {
 			position: sticky;
 			top: 127px;
-		}		
+		}
 	}
 
 	.scroll-home {
@@ -244,7 +243,7 @@ body {
 	}
 }
 
-@media(max-width: 47.999em) {
+@media (max-width: 47.999em) {
 	#mobileTest-Home {
 		display: block;
 		height: 3.7em;
@@ -265,7 +264,7 @@ body {
 		width: 96%;
 		padding: 2%;
 		height: 3.7em;
-		@include trans($height, $bkgd)
+		@include trans($height, $bkgd);
 
 		&.open {
 			height: 12.35em;

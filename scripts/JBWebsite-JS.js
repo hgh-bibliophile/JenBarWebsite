@@ -13,12 +13,11 @@ $(document).ready(function () {
 });
 
 function reset(element) {
-	$(element).removeAttr('style');
+	$(element).removeAttr("style");
 	$(window).scroll(function () {
-		$(element).removeAttr('style');
+		$(element).removeAttr("style");
 	});
 }
-
 
 //Shifting Menu Functions
 function scrollLogo() {
@@ -26,20 +25,19 @@ function scrollLogo() {
 		function runLogo() {
 			var scroll = $(window).scrollTop();
 			var logoWidth = 400;
-			var changeWidth = logoWidth - (scroll * 2);
+			var changeWidth = logoWidth - scroll * 2;
 			if (changeWidth < 90) {
 				changeWidth = 90;
 			}
 
-			$('.logo-shift').width(changeWidth);
-
+			$(".logo-shift").width(changeWidth);
 		}
 		runLogo();
 		$(window).scroll(function () {
 			runLogo();
 		});
 	} else if ($("#mobileTest-Home").css("display") == "block") {
-		reset('*');
+		reset("*");
 	}
 }
 
@@ -55,8 +53,7 @@ function shiftMenu() {
 			if (changePos < 7) {
 				changePos = 7;
 			}
-			var Pos = (" " + changePos + "px");
-
+			var Pos = " " + changePos + "px";
 
 			//Adjust Top Position of Menu
 			var menuTop = 200;
@@ -65,17 +62,17 @@ function shiftMenu() {
 				changeTop = 0;
 			}
 
-			$('#collapsable-menu').css({
-				left: Pos
+			$("#collapsable-menu").css({
+				left: Pos,
 			});
-			$('#collapsable-menu').css({
-				top: changeTop
+			$("#collapsable-menu").css({
+				top: changeTop,
 			});
-			$('#div').css({
-				top: 0
+			$("#div").css({
+				top: 0,
 			});
 			//Adjust Height of Background
-			$('.menu-wrapper').height(changeTop + 67);
+			$(".menu-wrapper").height(changeTop + 67);
 		}
 		runShift();
 
@@ -83,41 +80,42 @@ function shiftMenu() {
 			runShift();
 		});
 	} else if ($("#mobileTest-Home").css("display") == "block") {
-		reset('*');
+		reset("*");
 	}
 }
-
 
 //Background Color Change on Scroll
 function checkSize() {
 	function whiteLarge(scroll) {
 		if (scroll >= 150) {
-			$('#menu').addClass('black')
+			$("#menu").addClass("black");
 		} else {
-			$('#menu').removeClass('black')
+			$("#menu").removeClass("black");
 		}
 	}
 	function whiteMobile(scroll) {
 		if (scroll >= 195) {
-			$('#menu').addClass('black')
+			$("#menu").addClass("black");
 		} else {
-			$('#menu').removeClass('black')
-			}
+			$("#menu").removeClass("black");
+		}
 	}
 	function truckLarge(scroll) {
 		if (scroll >= 200) {
-			$('#menu').addClass('black')
-			$('#menu').removeClass('menu-resize')
-			$('#logo-resize').removeClass('logo-resize') // Work On This
+			$("#menu").addClass("black");
+			$("#menu").removeClass("menu-resize");
+			$("#logo-resize").removeClass("logo-resize"); // Work On This
 		} else {
-			$('#menu').removeClass('black')
-			$('#menu').addClass('menu-resize')
-			$('#logo-resize').addClass('logo-resize')
+			$("#menu").removeClass("black");
+			$("#menu").addClass("menu-resize");
+			$("#logo-resize").addClass("logo-resize");
 		}
 	}
 	function truckMobile(scroll) {
-		if (scroll >= 5) { 	$('#menu').addClass('black')
-		} else { $('#menu').removeClass('black')
+		if (scroll >= 5) {
+			$("#menu").addClass("black");
+		} else {
+			$("#menu").removeClass("black");
 		}
 	}
 
@@ -138,46 +136,42 @@ function checkSize() {
 	$(window).scroll(function () {
 		scrollTest();
 	});
-
 }
 
-
 (function (window, document) {
-	var menu = document.getElementById('menu'),
-		WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange' : 'resize';
+	var menu = document.getElementById("menu"),
+		WINDOW_CHANGE_EVENT =
+			"onorientationchange" in window ? "orientationchange" : "resize";
 
 	function toggleHorizontal() {
-            [].forEach.call(
-			document.getElementById('menu').querySelectorAll('.menu-can-open'),
+		[].forEach.call(
+			document.getElementById("menu").querySelectorAll(".menu-can-open"),
 			function (el) {
-				el.classList.toggle('pure-menu-horizontal');
-				el.classList.toggle('hidden');
+				el.classList.toggle("pure-menu-horizontal");
+				el.classList.toggle("hidden");
 			}
 		);
 	}
 
-
 	function toggleMenu() {
 		// set timeout so that the panel has a chance to roll up
 		// before the menu switches states
-		if (menu.classList.contains('open')) {
+		if (menu.classList.contains("open")) {
 			setTimeout(toggleHorizontal, 500);
 		} else {
 			toggleHorizontal();
-
 		}
-		menu.classList.toggle('open');
-		document.getElementById('toggle').classList.toggle('x');
+		menu.classList.toggle("open");
+		document.getElementById("toggle").classList.toggle("x");
 	}
 
 	function closeMenu() {
-		if (menu.classList.contains('open')) {
+		if (menu.classList.contains("open")) {
 			toggleMenu();
-
 		}
 	}
 
-	document.getElementById('toggle').addEventListener('click', function (e) {
+	document.getElementById("toggle").addEventListener("click", function (e) {
 		toggleMenu();
 		e.preventDefault();
 	});
