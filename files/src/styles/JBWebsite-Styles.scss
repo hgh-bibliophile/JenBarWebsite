@@ -127,8 +127,7 @@ body {
 	height: 285px;
 	background: linear-gradient($black_50, $black_50), $url_1;
 	background-repeat: no-repeat;
-	background-size: contain;
-	background-size: auto 100%;
+	background-size: cover;
 	background-position: center top;
 	position: relative;
 	top: 0;
